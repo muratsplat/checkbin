@@ -34,6 +34,8 @@ func main() {
 			c.JSON(200, gin.H{
 				"ok": true,
 			})
+
+			color.Green("A new service is registered. the service name is %s", service.Register.Name)
 		} else {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
@@ -48,7 +50,7 @@ func main() {
 		})
 	})
 
-	color.Green("Listening via websocket[%s/register] for new service..", *addr)
+	color.Green("the web server is up running for new service. Listing to %s", *addr)
 	r.Run(*addr) // listen and serve on 0.0.0.0:8080
 }
 
