@@ -1,2 +1,2 @@
 # checkbin
-Simple CreditCard Check Bin Service based on microserver
+Simple CreditCard Check Bin Service
